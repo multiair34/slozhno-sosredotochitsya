@@ -1,0 +1,196 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'IBM Plex mono', Arial, serif;
+  font-size: var(--font-size);
+  line-height: 18px;
+  color: var(--accent-color);
+  display: grid;
+}
+
+.light-object::after {
+  content: 'REC';
+  font-size: var(--font-size);
+  color: var(--accent-color);
+  position: absolute;
+  inset-inline-end: 25px;
+  inset-block-start: 13px;
+}
+
+.light-object::before {
+  content: '';
+  background-color: var(--accent-color);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  position: absolute;
+  inset-inline-end: 9px;
+  inset-block-start: 17px;
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+}
+
+.decorated-zone {
+  display: grid;
+}
+
+.header__theme-menu {
+  
+}
+
+.header__theme-menu-list {
+
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+}
+
+.header__theme-text {
+  font-weight: 700;
+  line-height: 96px;
+  margin-top: 65px;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor {
+  font-weight: 700;
+  color: var(--accessory-color);
+  background-color: var(--accent-color);
+
+}
+
+.decorated-zone::before {
+  content: '';
+  border: 1px solid var(--accent-color);
+
+}
+
+@media (375px <= width < 768px) {
+  .page {
+    padding: 0 10px;
+    gap: 40px;
+  }
+
+  .header__theme-menu {
+    margin-top: 75px;
+    justify-self: end;
+  }
+
+  .header__theme-menu-button {
+    padding: 13px 1.5px;
+  }
+
+  .header__theme-text {
+    margin-top: 65px;
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .title-decor {
+    margin-top: 55px;
+    margin-bottom: 66px;
+    line-height: 24px;
+  }
+}
+
+@media (768px <= width < 1024px){
+  .page {
+    padding: 0 20px;
+  }
+
+  .header__theme-menu {
+    margin-top: 190px;
+    margin-bottom: 170px;
+    justify-self: end;
+  }
+
+  .header__theme-menu-button {
+    padding: 13px 1.5px;
+  }
+
+  .header__theme-text {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  }
+
+  .title-decor {
+    justify-self: end;
+    max-width: 50%;
+    margin-top: 160px;
+    margin-bottom: 180px;
+    line-height: 24px;
+  }
+}
+
+@media (width >= 1024px) {
+  .page {
+    padding: 0 20px;
+  }
+
+  .header__theme-menu {
+    margin-bottom: 170px;
+  }
+
+  .header__theme-menu-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .header__theme-menu-button {
+    padding: 15px 10px;
+  }
+
+  .header__theme-text {
+    margin-top: 65px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  }
+
+  .title-decor {
+    justify-self: end;
+    max-width: 50%;
+    margin-top: 160px;
+    margin-bottom: 135px;
+    line-height: 24px;
+  }
+
+  .light-object::after {
+    content: 'REC';
+    font-size: var(--font-size);
+    color: var(--accent-color);
+    position: absolute;
+    inset-inline-end: 31px;
+    inset-block-start: 18px;
+  }
+  
+  .light-object::before {
+    content: '';
+    background-color: var(--accent-color);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    position: absolute;
+    inset-inline-end: 15px;
+    inset-block-start: 22px;
+    box-shadow: 0px 0px 4px 2px var(--accent-color);
+  }
+}
+
+.section__headlines {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 24px;
+}
+
+.section__title {
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+  font-size: inherit;
+}
+
+.section__text {
+  color: var(--text-color);
+}

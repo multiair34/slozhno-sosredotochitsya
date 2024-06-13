@@ -39,4 +39,7 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
