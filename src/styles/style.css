@@ -64,13 +64,19 @@
   margin-block-end: 10px;
 }
 
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .header__theme-menu-button {
-  padding: 13px 10px;
+  padding: 2px 18px;
   text-transform: lowercase;
 }
 
-.header__theme-menu-list {
-
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
 }
 
 .header__theme-menu {
@@ -190,8 +196,22 @@
   font-size: inherit;
 }
 
+.section h4 {
+  font-weight: 400;
+}
+
 .section__text {
   color: var(--text-color);
+  line-height: 24px;
+}
+
+.section__text-link {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--accent-color);
+}
+
+.section__text-link:hover {
+  text-decoration: underline;
 }
 
 .section__image {
