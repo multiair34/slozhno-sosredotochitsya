@@ -1,4 +1,5 @@
+*Яндекс Практикум
 
-Не забудьте установить зависимости `npm i` 
+**Спринт №3 «Сложно сосредоточиться»
 
-Основные команды описаны в `package.json`
+***https://github.com/multiair34/slozhno-sosredotochitsya.git
