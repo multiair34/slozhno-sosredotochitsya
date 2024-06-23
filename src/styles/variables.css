@@ -4,10 +4,14 @@
 */
 
 :root {
+  --background-img: url(../images/cover-image-dark.png);
+  --line-height: 18px;
   --font-size: 18px;
   --text-color: #F1B2CE;
   --accessory-color: #000028;
   --accent-color: #FF0070;
+  --accent-text-color: #FF0070;
   --main-text-color: #DB00FF;
   --hover-color: rgba(255, 0, 112, .4);
+  --IBMtext: 'IBM Plex mono', Courier, monospace;
 }
