@@ -11,6 +11,7 @@
   color: var(--accent-color);
   display: grid;
   padding: 10px;
+  max-width: 1024px;
 }
 
 .page:last-child{
@@ -26,8 +27,8 @@
   font-size: var(--font-size);
   color: var(--accent-color);
   position: absolute;
-  inset-inline-end: 33px;
-  inset-block-start: 15px;
+  top: 5px;
+  right: 30px;
 }
 
 .light-object::before {
@@ -37,9 +38,9 @@
   height: 9px;
   border-radius: 50%;
   position: absolute;
-  inset-inline-end: 17px;
-  inset-block-start: 19px;
   box-shadow: 0 0 4px 2px var(--accent-color);
+  top: 9px;
+  right: 10px;
 }
 
 .decorated-zone {
@@ -53,12 +54,13 @@
   content: '';
   display: inline-block;
   position: absolute;
-  margin-inline-start: calc(95% - 25px);
   border: 1px solid var(--accent-text-color);
   border-bottom: none;
   border-left: none;
   height: 25px;
   width: 25px;
+  top: 0;
+  right: 0;
 }
 
 .decorated-zone::after {
@@ -70,18 +72,26 @@
   border-right: none;
   height: 25px;
   width: 25px;
-  margin-block-start: 623px;
+  bottom: 0;
+  left: 0;
 }
 
 .header {
-  margin-bottom: 60px;
+  position: relative;
   height: 100vh;
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  gap: 65px;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   gap: 13px;
+  align-items: flex-end;
 }
 
 .header__theme-menu-button {
@@ -105,9 +115,7 @@
 }
 
 .header__theme-menu {
-  justify-self: end;
-  align-self: center;
-  /* margin-top: 65px; */
+  padding-top: 50px;
 }
 
 .header__theme-text {
@@ -178,29 +186,37 @@
 }
 
 .footer {
+  display: flex;
+  position: relative;
   height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer::before {
   content: '';
   display: inline-block;
-  margin-inline-start: calc(100% - 25px);
-  margin-block-start: 25px;
+  position: absolute;
   border: 1px solid var(--accent-text-color);
   border-bottom: none;
   border-left: none;
   height: 25px;
   width: 25px;
+  top: 0;
+  right: 0;
 }
 
 .footer::after {
   content: '';
   display: inline-block;
+  position: absolute;
   border: 1px solid var(--accent-text-color);
   border-top: none;
   border-right: none;
   height: 25px;
   width: 25px;
+  bottom: 0;
+  left: 0;
 }
 
 .footer__text {
@@ -210,8 +226,6 @@
   color: var(--main-text-color);
   text-shadow: 2px 2px 0 var(--accent-color);
   text-align: center;
-  padding-block-start: 70%;
-  padding-block-end: 70%;
 }
 
 
@@ -238,34 +252,24 @@
   }
 
   .title-decor {
-    justify-self: end;
+    align-self: end;
     margin-top: 162px;
     margin-bottom: 180px;
     max-width: 50%;
   }
 
-  .light-object::after {
-    inset-inline-end: 47px;
-    inset-block-start: 35px;
-  }
-  
-  .light-object::before {
-    inset-inline-end: 29px;
-    inset-block-start: 39px;
+  .section-table {
+    display: flex;
   }
 
-  .section-table {
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(auto-fit, minmax(100px, 100%));
+  .section__column {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
   }
 
   .section-table .section__headlines {
-    grid-row: span 12;
-  }
-
-  .section-table:first-of-type .section__headlines {
-    grid-row: span 4;
+    min-width: 35%;
   }
 
   .section-table .section__title {
@@ -358,10 +362,6 @@
     gap: 60px;
   }
 
-  .decorated-zone::before {
-    margin-block-start: -299px;
-  }
-
   .header__theme-menu {
     margin: 0;
     grid-row: 1;
@@ -370,7 +370,7 @@
   }
 
   .title-decor {
-    justify-self: end;
+    align-self: end;
     max-width: 50%;
   }
 
@@ -388,27 +388,18 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
   }
 
-  .light-object::after {
-    inset-inline-end: 47px;
-    inset-block-start: 24px;
-  }
-  
-  .light-object::before {
-    inset-inline-end: 29px;
-    inset-block-start: 28px;
+  .section-table {
+    display: flex;
   }
 
-  .section-table {
-    grid-template-columns: 1fr 2fr;
+  .section__column {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
   }
 
   .section-table .section__headlines {
-    grid-row: span 12;
-  }
-
-  .section-table:first-of-type .section__headlines {
-    grid-row: span 4;
+    min-width: 35%;
   }
 
   .section-table .section__title {
