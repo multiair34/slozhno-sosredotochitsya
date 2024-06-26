@@ -15,7 +15,7 @@
 }
 
 .page:last-child{
-  gap: 40px;
+  gap: 30px;
 }
 
 .light-object {
@@ -72,7 +72,7 @@
   border-right: none;
   height: 25px;
   width: 25px;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
 }
 
@@ -84,7 +84,7 @@
 .header__content {
   display: flex;
   flex-direction: column;
-  gap: 65px;
+  gap: 55px;
 }
 
 .header__theme-menu-list {
@@ -115,7 +115,7 @@
 }
 
 .header__theme-menu {
-  padding-top: 50px;
+  padding-top: 65px;
 }
 
 .header__theme-text {
@@ -124,6 +124,7 @@
   color: var(--main-text-color);
   text-shadow: 4px 4px 0 var(--accent-color);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  padding-top: 15px;
 }
 
 .title-decor {
@@ -140,7 +141,7 @@
 
 .section {
   display: grid;
-  gap: 15px;
+  gap: 20px;
 }
 
 .section:last-of-type {
@@ -152,6 +153,17 @@
   font-weight: 700;
   font-size: inherit;
   line-height: 24px;
+}
+
+.section__column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section__column-row {
+  display: grid;
+  gap: 10px;
 }
 
 .section__title {
@@ -238,23 +250,27 @@
   }
 
   .header {
-    margin-bottom: 40px;
+    padding-bottom: 180px;
+    margin-bottom: 30px;
     height: fit-content;
   }
 
   .header__theme-menu {
-    margin-top: 190px;
-    margin-bottom: 170px;
+    padding-top: 175px;
   }
 
   .header__theme-text {
+    position: relative;
+    left: -20px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  }
+
+  .header__content {
+    gap: 163px;
   }
 
   .title-decor {
     align-self: end;
-    margin-top: 162px;
-    margin-bottom: 180px;
     max-width: 50%;
   }
 
@@ -265,7 +281,7 @@
   .section__column {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 17px;
   }
 
   .section-table .section__headlines {
@@ -292,16 +308,15 @@
   }
 
   .section {
-    gap: 10px;
+    gap: 0;
   }
 
   .section:nth-of-type(2) .section__headlines {
-    max-width: 50%;
-    margin-bottom: 10px;
+    max-width: 30%;
+    margin-bottom: 15px;
   }
 
   .section .section__title {
-    margin-bottom: 10px;
     margin-top: 0;
     max-width: none;
     justify-self: start;
@@ -347,6 +362,10 @@
     grid-row: 4 / 6;
   }
 
+  .footer__text {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
   
 }
 
@@ -359,23 +378,24 @@
   }
 
   .page:last-child {
-    gap: 60px;
+    gap: 40px;
   }
 
   .header__theme-menu {
-    margin: 0;
-    grid-row: 1;
-    justify-self: center;
-    margin-block-end: 273px;
+    padding: 0;
   }
 
-  .title-decor {
+  .header__content .title-decor {
     align-self: end;
     max-width: 50%;
   }
 
   .header .title-decor {
-    margin-bottom: 120px;
+    margin-top: 130px;
+  }
+
+  .header__content {
+    gap: 0;
   }
 
   .header__theme-menu-list {
@@ -384,22 +404,22 @@
   }
 
   .header__theme-text {
-    margin-block-end: 115px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+    position: relative;
+    left: -20px;
+    padding-top: 295px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .decorated-zone::after {
+    bottom: 40px;
   }
 
   .section-table {
     display: flex;
   }
 
-  .section__column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .section-table .section__headlines {
-    min-width: 35%;
+    min-width: 33%;
   }
 
   .section-table .section__title {
@@ -408,13 +428,9 @@
     margin: 0;
     max-width: none;
   }
-
-  .section__text:last-of-type {
-    margin-bottom: 0;
-  }
   
   .main {
-    gap: 80px;
+    gap: 75px;
   }
 
   .section {
@@ -422,25 +438,27 @@
   }
 
   .section:nth-of-type(2) {
+    display: block;
+  }
+
+  .section__column-flex {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, auto);
+    gap: 10px;
+  }
+
+  .section__column {
+    gap: 19px;
+  }
+
+  .section__column-flex .section__column-row {
+    display: flex;
+    flex-direction: column;
   }
 
   .section:nth-of-type(2) .section__headlines {
     max-width: 30%;
-    margin-bottom: 10px;
-    grid-column: 1 / 4;
-    grid-row: 1;
-  }
-
-  .section .section__title {
-    margin-bottom: 10px;
-    margin-top: 0;
-    max-width: none;
-  }
-
-  .section:nth-of-type(2) .section__title {
-    grid-row: 2;
+    margin-bottom: 19px;
   }
 
   .section-gallery .title-decor {
@@ -478,6 +496,10 @@
     object-fit: cover;
     grid-column: 2 / 4;
     grid-row: 4 / 6;
+  }
+
+  .footer__text {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
   
 }
