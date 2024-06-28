@@ -11,8 +11,10 @@
   --accessory-color: #353430;
   --accent-color: #FF8DCB;
   --accent-text-color: #353430;
+  --shadow-headlines: #FF0070;
   --main-text-color: #FFC2E6;
   --hover-color: rgba(53, 52, 48, .4);
+  --IBMtext: 'IBM Plex mono', Courier, monospace;
 }
 
 .page.theme_light .light-object {
@@ -20,14 +22,21 @@
 }
 
 @media (prefers-color-scheme: light) {
+
+  .light-object {
+    display: none;
+  }
   
   :root {
+    background-image: var(--background-img);
     --background-img: url(../images/cover-image-light.png);
     --text-color: #353430;
     --accessory-color: #353430;
     --accent-color: #FF8DCB;
     --accent-text-color: #353430;
+    --shadow-headlines: #FF0070;
     --main-text-color: #FFC2E6;
     --hover-color: rgba(53, 52, 48, .4);
+    --IBMtext: 'IBM Plex mono', Courier, monospace;
   }
 }
