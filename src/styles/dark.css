@@ -18,3 +18,6 @@
   --IBMtext: 'IBM Plex mono', Courier, monospace;
 }
 
+.page.theme_dark .light-object {
+  display: contents;
+}
