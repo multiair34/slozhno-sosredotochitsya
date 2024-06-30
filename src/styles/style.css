@@ -114,10 +114,6 @@
   border-bottom: 1px solid var(--accent-text-color);
 }
 
-.header__theme-menu {
-
-}
-
 .header__theme-text {
   font-weight: 700;
   line-height: 96px;
@@ -381,10 +377,6 @@
     gap: 40px;
   }
 
-  .decorated-zone {
-
-  }
-
   .header__theme-menu {
     padding: 0;
   }
@@ -412,7 +404,6 @@
   .header__theme-text {
     position: relative;
     left: -20px;
-    
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
