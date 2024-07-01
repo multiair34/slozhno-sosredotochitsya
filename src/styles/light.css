@@ -28,7 +28,6 @@
   }
   
   :root {
-    background-image: var(--background-img);
     --background-img: url(../images/cover-image-light.png);
     --text-color: #353430;
     --accessory-color: #353430;
